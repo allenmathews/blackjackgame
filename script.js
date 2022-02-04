@@ -15,6 +15,16 @@ let player = {
 
 playerEl.textContent = player.name + ": $" + player.chips
 
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if (randomNumber > 10) {
+//         return 10
+//     } else if (randomNumber === 1) {
+//         return 11
+//     } else {
+//         return randomNumber
+//     }
+// }
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
@@ -26,11 +36,12 @@ function getRandomCard() {
     }
 }
 
+
 function startGame() {
     isAlive = true;
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
-    cards = [firstCard + secondCard]
+    cards = [firstCard, secondCard]
     sum = firstCard + secondCard
     renderGame()
 }
